@@ -1,0 +1,1 @@
+# Este controller pode ser usado para servir arquivos estáticos personalizados, se necessário.
