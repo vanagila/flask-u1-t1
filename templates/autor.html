@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Autor</title>
+    <style>
+        .container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 500px;
+            text-align: center;
+        }
+
+        h1, h2 {
+            color: #0056b3;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            background-color: #e9ecef;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .btn-voltar {
+            display: inline-block;
+            margin-top: 20px;
+            background-color: #6c757d;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        
+        .btn-voltar:hover {
+            background-color: #5a6268;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Autor</h1>
+        <p>Nome: Vanágila Xavier Rodrigues</p>
+        <h2>Formações acadêmicas</h2>
+        <ul>
+            <li>Curso: Engenharia de Software | Instituição: UNOPAR | 4º Semestre</li>
+            <li>Curso: Informática para Internet | Instituição: IFCE | 2º Semestre</li>
+        </ul>
+        <h2>Experiências profissionais</h2>
+        <ul>
+            <li>Função: Desenvolvedora Full Stack Júnior | Empresa: Facilita System | Ano: 2024</li>
+        </ul>
+        <a href="{{ url_for('index') }}" class="btn-voltar">Voltar</a>
+    </div>
+</body>
+</html>
