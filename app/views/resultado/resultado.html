@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        <title>Resultado</title>
+        <style>
+            .container {
+                background-color: #fff;
+                padding: 40px;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                width: 90%;
+                max-width: 700px;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            h1, h2 {
+                color: #0056b3;
+                text-align: center;
+            }
+
+            p {
+                margin: 10px 0;
+                font-size: 1.1em;
+            }
+
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 20px;
+            }
+
+            th, td {
+                border: 1px solid #ddd;
+                padding: 12px;
+            }
+
+            th {
+                background-color: #007bff;
+                color: white;
+                text-transform: uppercase;
+            }
+
+            tr:nth-child(even) {
+                background-color: #f2f2f2;
+            }
+            
+            .btn-voltar {
+                display: inline-block;
+                margin-top: 20px;
+                background-color: #6c757d;
+                color: white;
+                padding: 12px 20px;
+                border-radius: 5px;
+                text-decoration: none;
+                transition: background-color 0.3s ease;
+            }
+
+            .btn-voltar:hover {
+                background-color: #5a6268;
+            }
+        </style>
+    </head>
+    <body>
+        <section>
+            <h1>Resultado</h1>
+            <p>Peso: {{ peso }}</p>
+            <p>Altura: {{ altura }}</p>
+            <p>IMC: {{ imc | round(2) }} </p>
+        </section>
+
+        <section>
+            <h2>Tabela de Classificação do IMC para Mulheres</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>IMC</th>
+                        <th>Classificação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Abaixo de 18.5</td>
+                        <td>Abaixo do peso</td>
+                    </tr>
+                    <tr>
+                        <td>18.5 a 24.9</td>
+                        <td>Peso normal</td>
+                    </tr>
+                    <tr>
+                        <td>25.0 a 29.9</td>
+                        <td>Sobrepeso</td>
+                    </tr>
+                    <tr>
+                        <td>30.0 ou mais</td>
+                        <td>Obesidade</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>Tabela de Classificação do IMC para Homens</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>IMC</th>
+                        <th>Classificação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Abaixo de 20.0</td>
+                        <td>Abaixo do peso</td>
+                    </tr>
+                    <tr>
+                        <td>20.0 a 25.0</td>
+                        <td>Peso normal</td>
+                    </tr>
+                    <tr>
+                        <td>25.1 a 30.0</td>
+                        <td>Sobrepeso</td>
+                    </tr>
+                    <tr>
+                        <td>30.1 ou mais</td>
+                        <td>Obesidade</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <a href="{{ url_for('index') }}" class="btn-voltar">Voltar</a>
+    </body>
+</html>

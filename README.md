@@ -14,15 +14,29 @@ Aplicação web simples utilizando Python e Flask para calcular o IMC (Índice d
 ## Estrutura do Projeto
 ```
 flask-u1-t1/
-├─ app.py
-├─ templates/
-│  ├─ index.html
-│  ├─ resultado.html
-│  └─ autor.htmls
+├─ app/
+│  ├─ controllers/
+│  │  └─ __init__.py
+│  │  └─ AutorController.py
+│  │  └─ ResultadoController.py
+│  │  └─ StaticController.py
+│  ├─ models/
+│  │  └─ __init__.py
+│  │  └─ Resultado.py
+│  └─ views/
+│     ├─ autor/
+│     │  └─ autor.html
+│     ├─ index/
+│     │  └─ index.html
+│     └─ resultado/
+│        └─ resultado.html
+│  └─ __init__.py
 ├─ static/
 │  └─ css/
 │     └─ style.css
+├─ app.py
 └─ README.md
+
 ```
 
 ## Como executar
